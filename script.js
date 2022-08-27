@@ -28,3 +28,27 @@ function operate(operator, a, b) {
         return divide(a, b);
 }
 
+function addToDisplay() {
+    display.textContent += this.textContent;
+}
+
+function erase() {
+    if (this.textContent === 'DEL') {
+        display.textContent = display.textContent.slice(0, -1);
+    }
+    else if (this.textContent === 'C') {
+        display.textContent = '';
+    }
+}
+
+function addEventListeners() {
+    const screenButtons = document.querySelectorAll("button.onscreen");
+    screenButtons.forEach((button) => button.addEventListener("click", addToDisplay))
+
+    const eraseButtons = document.querySelectorAll("button.erase");
+    eraseButtons.forEach((button) => button.addEventListener("click", erase))
+}
+
+const display = document.getElementById("screen");
+addEventListeners();
+
