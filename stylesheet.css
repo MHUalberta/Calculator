@@ -1,12 +1,24 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    width: 400px;
+    height: 600px;
+}
 #screen {
-    width: 50vw;
-    height: 50px;
+    height: 25%;
     background-color: green;
 }
 #buttons-container {
+    height: 75%;
     display: flex;
     flex-wrap: wrap;
-    width: 50vw;
     gap: 5%;
 }
 
