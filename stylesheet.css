@@ -8,12 +8,19 @@ body {
 }
 
 #calculator {
-    width: 400px;
-    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+    width: 25%;
+    height: 60%;
+    background-color: #272727;
+    padding: 1.75%;
+    border-radius: 16px;
 }
+
 #screen {
     height: 25%;
-    background-color: green;
+    background-color: #cde5da;
 }
 #buttons-container {
     height: 75%;
@@ -24,4 +31,5 @@ body {
 
 #buttons-container button {
     width: 16%;
+    font-size: 1.2vw;
 }
